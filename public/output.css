@@ -560,3 +560,12 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  background-color: #010026;
+  color: white;
+}

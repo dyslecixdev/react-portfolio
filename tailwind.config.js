@@ -10,9 +10,9 @@ module.exports = {
 				yellow: '#FDCC49',
 				blue: '#2CBCE9',
 				'deep-blue': '#010026',
-				grey: '#EDEDED',
+				grey: '#ededed',
 				'dark-grey': '#757575',
-				'opaque-black': 'rgba(0, 0, 0, 0.35)'
+				'opaque-black': 'rgba(0,0,0,0.35)'
 			},
 			// Background images.
 			backgroundImage: () => ({
