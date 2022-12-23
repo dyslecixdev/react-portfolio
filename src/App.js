@@ -5,6 +5,8 @@ import {motion} from 'framer-motion';
 import Navbar from './components/Navbar';
 import DotGroup from './components/DotGroup';
 import Home from './pages/Home';
+import LineGradient from './components/LineGradient';
+import Skills from './pages/Skills';
 
 import useMediaQuery from './hooks/useMediaQuery';
 
@@ -43,6 +45,18 @@ function App() {
 					onViewportEnter={() => setSelectedPage('home')}
 				>
 					<Home setSelectedPage={setSelectedPage} />
+				</motion.div>
+			</div>
+
+			<LineGradient width='w-full md:w-3/5' />
+
+			<div className='w-5/6 mx-auto md:h-full'>
+				<motion.div
+					margin='0 0 -200px 0'
+					amount='all'
+					onViewportEnter={() => setSelectedPage('skills')}
+				>
+					<Skills />
 				</motion.div>
 			</div>
 		</div>
