@@ -1,6 +1,4 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable react/function-component-definition */
-/* eslint-disable no-unused-vars */
 import {useState} from 'react';
 
 import AnchorLink from 'react-anchor-link-smooth-scroll';
@@ -9,7 +7,9 @@ import PropTypes from 'prop-types';
 
 import useMediaQuery from '../hooks/useMediaQuery';
 
-const Link = ({page, selectedPage, setSelectedPage}) => {
+import MenuIcon from '../assets/menu-icon.png';
+
+function Link({page, selectedPage, setSelectedPage}) {
 	const lowerCasePage = page.toLowerCase();
 
 	return (
@@ -23,26 +23,27 @@ const Link = ({page, selectedPage, setSelectedPage}) => {
 			{page}
 		</AnchorLink>
 	);
-};
+}
 
+// EsLint prop types.
 Link.propTypes = {
 	page: PropTypes.string.isRequired,
 	selectedPage: PropTypes.string.isRequired,
 	setSelectedPage: PropTypes.func.isRequired
 };
 
-function Navbar({selectedPage, setSelectedPage}) {
+function Navbar({isTopOfPage, selectedPage, setSelectedPage}) {
 	const [isMenuToggled, setIsMenuToggled] = useState(false);
 	const isDesktop = useMediaQuery('(min-width: 768px)');
+	const navbarBackground = isTopOfPage ? '' : 'bg-red';
 
 	return (
-		// eslint-disable-next-line react/jsx-curly-brace-presence
-		<nav className={`z-40 w-full fixed top-0 py-6`}>
+		<nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
 			<div className='flex items-center justify-between mx-auto w-5/6'>
 				<h4 className='font-playfair text-3xl font-bold'>JE</h4>
 
-				{/* Desktop Navbar */}
 				{isDesktop ? (
+					// Desktop Navbar
 					<div className='flex justify-between gap-16 font-opensans text-sm font-semibold'>
 						<Link
 							page='Home'
@@ -71,7 +72,55 @@ function Navbar({selectedPage, setSelectedPage}) {
 						/>
 					</div>
 				) : (
-					<div>Hello</div>
+					// Mobile Hamburger Icon
+					<button
+						type='button'
+						className='rounded-full bg-red w-10 p-2'
+						onClick={() => setIsMenuToggled(!isMenuToggled)}
+					>
+						<img alt='menu-icon' src={MenuIcon} />
+					</button>
+				)}
+
+				{/* Mobile Menu Popup */}
+				{!isDesktop && isMenuToggled && (
+					<div className='fixed right-0 bottom-0 h-full bg-blue w-[300px]'>
+						{/* Close Icon */}
+						<div className='flex justify-end p-12'>
+							<button type='button' onClick={() => setIsMenuToggled(!isMenuToggled)}>
+								X
+							</button>
+						</div>
+
+						{/* Menu Links */}
+						<div className='flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue'>
+							<Link
+								page='Home'
+								selectedPage={selectedPage}
+								setSelectedPage={setSelectedPage}
+							/>
+							<Link
+								page='Skills'
+								selectedPage={selectedPage}
+								setSelectedPage={setSelectedPage}
+							/>
+							<Link
+								page='Projects'
+								selectedPage={selectedPage}
+								setSelectedPage={setSelectedPage}
+							/>
+							<Link
+								page='Testimonials'
+								selectedPage={selectedPage}
+								setSelectedPage={setSelectedPage}
+							/>
+							<Link
+								page='Contact'
+								selectedPage={selectedPage}
+								setSelectedPage={setSelectedPage}
+							/>
+						</div>
+					</div>
 				)}
 			</div>
 		</nav>
@@ -79,6 +128,7 @@ function Navbar({selectedPage, setSelectedPage}) {
 }
 
 Navbar.propTypes = {
+	isTopOfPage: PropTypes.bool.isRequired,
 	selectedPage: PropTypes.string.isRequired,
 	setSelectedPage: PropTypes.func.isRequired
 };
