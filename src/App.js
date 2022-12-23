@@ -1,7 +1,10 @@
 import {useState, useEffect} from 'react';
 
+import {motion} from 'framer-motion';
+
 import Navbar from './components/Navbar';
 import DotGroup from './components/DotGroup';
+import Home from './pages/Home';
 
 import useMediaQuery from './hooks/useMediaQuery';
 
@@ -34,6 +37,13 @@ function App() {
 				{isAboveMediumScreens && (
 					<DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
 				)}
+				<motion.div
+					margin='0 0 -200px 0'
+					amount='all'
+					onViewportEnter={() => setSelectedPage('home')}
+				>
+					<Home setSelectedPage={setSelectedPage} />
+				</motion.div>
 			</div>
 		</div>
 	);

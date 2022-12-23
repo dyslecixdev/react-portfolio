@@ -17,7 +17,7 @@ function Link({page, selectedPage, setSelectedPage}) {
 			className={`${
 				selectedPage === lowerCasePage ? 'text-yellow' : ''
 			} hover:text-yellow transition duration-500`}
-			href={`#${lowerCasePage}`}
+			href={`#${lowerCasePage}`} // href needed to navigate to each page.
 			onClick={() => setSelectedPage(lowerCasePage)}
 		>
 			{page}
@@ -38,7 +38,7 @@ function Navbar({isTopOfPage, selectedPage, setSelectedPage}) {
 	const navbarBackground = isTopOfPage ? '' : 'bg-red';
 
 	return (
-		<nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
+		<nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6 duration-500`}>
 			<div className='flex items-center justify-between mx-auto w-5/6'>
 				<h4 className='font-playfair text-3xl font-bold'>JE</h4>
 
@@ -87,7 +87,11 @@ function Navbar({isTopOfPage, selectedPage, setSelectedPage}) {
 					<div className='fixed right-0 bottom-0 h-full bg-blue w-[300px]'>
 						{/* Close Icon */}
 						<div className='flex justify-end p-12'>
-							<button type='button' onClick={() => setIsMenuToggled(!isMenuToggled)}>
+							<button
+								type='button'
+								className='text-2xl'
+								onClick={() => setIsMenuToggled(!isMenuToggled)}
+							>
 								X
 							</button>
 						</div>
