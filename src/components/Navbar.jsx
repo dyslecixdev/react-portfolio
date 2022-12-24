@@ -38,7 +38,7 @@ function Navbar({isTopOfPage, selectedPage, setSelectedPage}) {
 	return (
 		<nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6 duration-500`}>
 			<div className='flex items-center justify-between mx-auto w-5/6'>
-				<h4 className='font-playfair text-3xl font-bold'>JE</h4>
+				<h4 className='font-playfair text-3xl font-bold'>CD</h4>
 
 				{isDesktop ? (
 					// Desktop Navbar

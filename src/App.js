@@ -9,6 +9,7 @@ import LineGradient from './components/LineGradient';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Footer from './components/Footer';
 import useMediaQuery from './hooks/useMediaQuery';
 
 function App() {
@@ -84,6 +85,8 @@ function App() {
 					<Contact />
 				</motion.div>
 			</div>
+
+			<Footer />
 		</div>
 	);
 }
