@@ -1,12 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import {useState} from 'react';
-
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import PropTypes from 'prop-types';
 
 import useMediaQuery from '../hooks/useMediaQuery';
-
 import MenuIcon from '../assets/menu-icon.png';
 
 function Link({page, selectedPage, setSelectedPage}) {
@@ -61,11 +59,6 @@ function Navbar({isTopOfPage, selectedPage, setSelectedPage}) {
 							setSelectedPage={setSelectedPage}
 						/>
 						<Link
-							page='Testimonials'
-							selectedPage={selectedPage}
-							setSelectedPage={setSelectedPage}
-						/>
-						<Link
 							page='Contact'
 							selectedPage={selectedPage}
 							setSelectedPage={setSelectedPage}
@@ -110,11 +103,6 @@ function Navbar({isTopOfPage, selectedPage, setSelectedPage}) {
 							/>
 							<Link
 								page='Projects'
-								selectedPage={selectedPage}
-								setSelectedPage={setSelectedPage}
-							/>
-							<Link
-								page='Testimonials'
 								selectedPage={selectedPage}
 								setSelectedPage={setSelectedPage}
 							/>

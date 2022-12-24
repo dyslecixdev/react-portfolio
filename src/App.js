@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import LineGradient from './components/LineGradient';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
-
+import Contact from './pages/Contact';
 import useMediaQuery from './hooks/useMediaQuery';
 
 function App() {
@@ -70,6 +70,18 @@ function App() {
 					onViewportEnter={() => setSelectedPage('projects')}
 				>
 					<Projects />
+				</motion.div>
+			</div>
+
+			<LineGradient />
+
+			<div className='w-5/6 mx-auto md:h-auto'>
+				<motion.div
+					margin='0 0 -200px 0'
+					amount='all'
+					onViewportEnter={() => setSelectedPage('contact')}
+				>
+					<Contact />
 				</motion.div>
 			</div>
 		</div>

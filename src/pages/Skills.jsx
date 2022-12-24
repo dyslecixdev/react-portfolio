@@ -1,9 +1,7 @@
 import {motion} from 'framer-motion';
 
 import LineGradient from '../components/LineGradient';
-
 import useMediaQuery from '../hooks/useMediaQuery';
-
 import SkillsImg from '../assets/skills-image.png';
 
 function Skills() {

@@ -5,9 +5,7 @@ import {motion} from 'framer-motion';
 import PropTypes from 'prop-types';
 
 import SocialMediaIcons from '../components/SocialMediaIcons';
-
 import useMediaQuery from '../hooks/useMediaQuery';
-
 import ProfileImg from '../assets/profile-image.png';
 
 function Home({setSelectedPage}) {
