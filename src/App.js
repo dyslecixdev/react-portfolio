@@ -7,6 +7,7 @@ import DotGroup from './components/DotGroup';
 import Home from './pages/Home';
 import LineGradient from './components/LineGradient';
 import Skills from './pages/Skills';
+import Projects from './pages/Projects';
 
 import useMediaQuery from './hooks/useMediaQuery';
 
@@ -35,7 +36,7 @@ function App() {
 			/>
 
 			{/* Lower right navigation dots */}
-			<div className='w-5/6 mx-auto md:h-full'>
+			<div className='w-5/6 mx-auto md:h-auto'>
 				{isAboveMediumScreens && (
 					<DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
 				)}
@@ -48,15 +49,27 @@ function App() {
 				</motion.div>
 			</div>
 
-			<LineGradient width='w-full md:w-3/5' />
+			<LineGradient />
 
-			<div className='w-5/6 mx-auto md:h-full'>
+			<div className='w-5/6 mx-auto md:h-auto'>
 				<motion.div
 					margin='0 0 -200px 0'
 					amount='all'
 					onViewportEnter={() => setSelectedPage('skills')}
 				>
 					<Skills />
+				</motion.div>
+			</div>
+
+			<LineGradient />
+
+			<div className='w-5/6 mx-auto md:h-auto'>
+				<motion.div
+					margin='0 0 -200px 0'
+					amount='all'
+					onViewportEnter={() => setSelectedPage('projects')}
+				>
+					<Projects />
 				</motion.div>
 			</div>
 		</div>

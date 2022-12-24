@@ -1215,6 +1215,10 @@ body,
     height: 100%;
   }
 
+  .md\:h-auto{
+    height: auto;
+  }
+
   .md\:w-1\/3{
     width: 33.333333%;
   }
