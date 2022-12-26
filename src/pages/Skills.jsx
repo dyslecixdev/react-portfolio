@@ -5,14 +5,10 @@ import {motion} from 'framer-motion';
 
 import LineGradient from '../components/LineGradient';
 import Globe from '../components/Globe';
-import useMediaQuery from '../hooks/useMediaQuery';
 
 function Skills() {
-	// eslint-disable-next-line no-unused-vars
-	const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)');
-
 	return (
-		<section id='skills' className='pt-10 mb-20 relative border-l-red'>
+		<section id='skills' className='pt-10 mb-20 relative'>
 			{/* Globe Background */}
 			<div className='absolute w-full h-full'>
 				<Canvas id='canvas'>
@@ -23,7 +19,7 @@ function Skills() {
 			</div>
 
 			{/* Header */}
-			<div className='md:flex md:justify-between md:gap-16 mt-32 px-4'>
+			<div className='md:flex md:justify-between md:gap-16 mt-20 px-4'>
 				{/* Text */}
 				<motion.div
 					className='md:w-1/3'
@@ -52,7 +48,6 @@ function Skills() {
 					</p>
 				</motion.div>
 			</div>
-
 			{/* Skills */}
 			<div className='md:flex md:justify-between mt-16 gap-32 px-4'>
 				{/* Experience */}

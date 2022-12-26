@@ -9,7 +9,8 @@ import * as yup from 'yup';
 
 import LineGradient from '../components/LineGradient';
 
-import ContactImg from '../assets/contact-image.jpeg';
+import ContactImg from '../assets/contact-img.svg';
+import SpaceImg from '../assets/space.png';
 
 // Initial values for formik fields, and matches emailjs template.
 const initialValues = {
@@ -63,7 +64,14 @@ function Contact() {
 	};
 
 	return (
-		<section id='contact' className='contact pt-36 pb-48'>
+		<section id='contact' className='pb-20 mx-auto relative'>
+			{/* Space Background */}
+			<img
+				alt='space-background'
+				src={SpaceImg}
+				className='absolute w-full h-full bg-cover bg-center bg-repeat'
+			/>
+
 			{/* Heading */}
 			<motion.div
 				initial='hidden'
@@ -74,7 +82,7 @@ function Contact() {
 					hidden: {opacity: 0, x: 50},
 					visible: {opacity: 1, x: 0}
 				}}
-				className='flex justify-end w-full'
+				className='flex justify-end w-full pt-24 pr-8 pl-4'
 			>
 				<div>
 					<p className='font-playfair font-semibold text-4xl'>
@@ -86,8 +94,8 @@ function Contact() {
 				</div>
 			</motion.div>
 
-			<div className='md:flex md:justify-between gap-16 mt-5'>
-				{/* Image */}
+			<div className='md:flex md:justify-between gap-16 mt-5 md:pr-12'>
+				{/* Animated Image */}
 				<motion.div
 					initial='hidden'
 					whileInView='visible'
@@ -97,7 +105,7 @@ function Contact() {
 						hidden: {opacity: 0, y: 50},
 						visible: {opacity: 1, y: 0}
 					}}
-					className='basis-1/2 flex justify-center'
+					className='basis-1/2 flex justify-center animate-space-bob'
 				>
 					<img src={ContactImg} alt='contact' />
 				</motion.div>
@@ -112,7 +120,7 @@ function Contact() {
 						hidden: {opacity: 0, y: 50},
 						visible: {opacity: 1, y: 0}
 					}}
-					className='basis-1/2 mt-10 md:mt-0'
+					className='basis-1/2 mt-10 md:mt-0 md:flex md:flex-col md:justify-center px-8'
 				>
 					<Formik
 						onSubmit={submitForm}

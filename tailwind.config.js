@@ -29,6 +29,18 @@ module.exports = {
 			// Images.
 			content: {
 				brush: "url('./assets/brush.png')"
+			},
+			// Keyframes.
+			keyframes: {
+				bob: {
+					'0%': {transform: 'translateY(0)'},
+					'50%': {transform: 'translateY(-30px)'},
+					'100%': {transform: 'translateY(0)'}
+				}
+			},
+			// Animations.
+			animation: {
+				'space-bob': 'bob 2s linear infinite'
 			}
 		},
 		// Viewport breakpoints.
