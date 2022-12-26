@@ -18,7 +18,7 @@ const projectVariant = {
 };
 
 function Project({title, subtitle}) {
-	const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
+	const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-black cursor-pointer`;
 	const projectTitle = title.split(' ').join('-').toLowerCase();
 
 	return (
@@ -40,7 +40,7 @@ Project.propTypes = {
 
 function Projects() {
 	return (
-		<section id='projects' className='pt-36 pb-48'>
+		<section id='projects' className='mx-auto py-36 md:bg-gradient-space'>
 			{/* Header */}
 			<motion.div
 				className='md:w-2/5 mx-auto text-center'
@@ -72,7 +72,7 @@ function Projects() {
 			</motion.div>
 
 			{/* Projects */}
-			<div className='flex justify-center'>
+			<div className='flex justify-center px-8'>
 				<motion.div
 					className='sm:grid sm:grid-cols-3'
 					variants={container}
@@ -123,7 +123,7 @@ function Projects() {
 					/>
 					<motion.div
 						variants={projectVariant}
-						className='flex justify-center text-center items-center p-10 bg-yellow max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold'
+						className='flex justify-center text-center items-center p-10 bg-yellow text-black max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold'
 					>
 						SMOOTH USER EXPERIENCE
 					</motion.div>

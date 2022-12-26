@@ -6,20 +6,24 @@ module.exports = {
 		extend: {
 			// Color palette.
 			colors: {
-				red: '#DC4492',
-				yellow: '#FDCC49',
-				blue: '#2CBCE9',
-				'deep-blue': '#010026',
+				red: '#9d3582',
+				yellow: '#fedd34',
+				blue: '#5daff8',
+				'dark-blue': '#5b4db3',
+				black: '#121212',
+				'opaque-black': 'rgba(0,0,0,0.35)',
 				grey: '#ededed',
 				'dark-grey': '#757575',
-				'opaque-black': 'rgba(0,0,0,0.35)'
+				white: '#FBF9F3'
 			},
 			// Background images.
 			backgroundImage: () => ({
 				'gradient-rainbow':
-					'linear-gradient(81.66deg, #00B5EE 7.21%, #FF45A4 45.05%, #FFBA00 78.07%)',
-				'gradient-rainblue':
-					'linear-gradient(90deg, #24cbff 14.53%, #Fc59ff 69.36%, #FFBD0C 107.73%)'
+					'linear-gradient(90deg, #5daff8 14.53%, #9d3582 69.36%, #fedd34 107.73%)',
+				'gradient-space':
+					'radial-gradient(circle at 0% 100%, #49273f, #2d2450 13%, #121212 20%)',
+				'gradient-reverse-space':
+					'radial-gradient(circle at 100% 0%, #49273f 18%, #2d2450 36%, #121212 50%)'
 			}),
 			// Font families.
 			fontFamily: {
@@ -36,11 +40,20 @@ module.exports = {
 					'0%': {transform: 'translateY(0)'},
 					'50%': {transform: 'translateY(-30px)'},
 					'100%': {transform: 'translateY(0)'}
+				},
+				slideLeft: {
+					'0%': {transform: 'translateX(300px)'},
+					'100%': {transform: 'translateX(0)'}
+				},
+				slideRight: {
+					'0%': {transform: 'translateX(0)'},
+					'100%': {transform: 'translateX(300px)'}
 				}
 			},
 			// Animations.
 			animation: {
-				'space-bob': 'bob 2s linear infinite'
+				'space-bob': 'bob 2s linear infinite',
+				'slide-left': 'slideLeft 0.5s ease-out'
 			}
 		},
 		// Viewport breakpoints.

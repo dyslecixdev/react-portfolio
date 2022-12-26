@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import useMediaQuery from '../hooks/useMediaQuery';
 import MenuIcon from '../assets/menu-icon.png';
 
-function Link({page, selectedPage, setSelectedPage}) {
+function Link({page, selectedPage, setSelectedPage, setIsMenuToggled}) {
 	const lowerCasePage = page.toLowerCase();
 
 	return (
@@ -16,7 +16,7 @@ function Link({page, selectedPage, setSelectedPage}) {
 				selectedPage === lowerCasePage ? 'text-yellow' : ''
 			} hover:text-yellow transition duration-500`}
 			href={`#${lowerCasePage}`} // href needed to navigate to each page.
-			onClick={() => setSelectedPage(lowerCasePage)}
+			onClick={(() => setSelectedPage(lowerCasePage), () => setIsMenuToggled(false))}
 		>
 			{page}
 		</AnchorLink>
@@ -27,13 +27,14 @@ function Link({page, selectedPage, setSelectedPage}) {
 Link.propTypes = {
 	page: PropTypes.string.isRequired,
 	selectedPage: PropTypes.string.isRequired,
-	setSelectedPage: PropTypes.func.isRequired
+	setSelectedPage: PropTypes.func.isRequired,
+	setIsMenuToggled: PropTypes.func.isRequired
 };
 
 function Navbar({isTopOfPage, selectedPage, setSelectedPage}) {
 	const [isMenuToggled, setIsMenuToggled] = useState(false);
 	const isDesktop = useMediaQuery('(min-width: 768px)');
-	const navbarBackground = isTopOfPage ? '' : 'bg-red';
+	const navbarBackground = isTopOfPage ? '' : 'bg-dark-blue';
 
 	return (
 		<nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6 duration-500`}>
@@ -68,7 +69,7 @@ function Navbar({isTopOfPage, selectedPage, setSelectedPage}) {
 					// Mobile Hamburger Icon
 					<button
 						type='button'
-						className='rounded-full bg-red w-10 p-2'
+						className='rounded-full bg-dark-blue w-10 p-2'
 						onClick={() => setIsMenuToggled(!isMenuToggled)}
 					>
 						<img alt='menu-icon' src={MenuIcon} />
@@ -77,7 +78,7 @@ function Navbar({isTopOfPage, selectedPage, setSelectedPage}) {
 
 				{/* Mobile Menu Popup */}
 				{!isDesktop && isMenuToggled && (
-					<div className='fixed right-0 bottom-0 h-full bg-blue w-[300px]'>
+					<div className='fixed right-0 bottom-0 h-full bg-dark-blue w-[300px] animate-slide-left'>
 						{/* Close Icon */}
 						<div className='flex justify-end p-12'>
 							<button
@@ -95,21 +96,25 @@ function Navbar({isTopOfPage, selectedPage, setSelectedPage}) {
 								page='Home'
 								selectedPage={selectedPage}
 								setSelectedPage={setSelectedPage}
+								setIsMenuToggled={setIsMenuToggled}
 							/>
 							<Link
 								page='Skills'
 								selectedPage={selectedPage}
 								setSelectedPage={setSelectedPage}
+								setIsMenuToggled={setIsMenuToggled}
 							/>
 							<Link
 								page='Projects'
 								selectedPage={selectedPage}
 								setSelectedPage={setSelectedPage}
+								setIsMenuToggled={setIsMenuToggled}
 							/>
 							<Link
 								page='Contact'
 								selectedPage={selectedPage}
 								setSelectedPage={setSelectedPage}
+								setIsMenuToggled={setIsMenuToggled}
 							/>
 						</div>
 					</div>

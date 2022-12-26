@@ -2,7 +2,7 @@ import SocialMediaIcons from './SocialMediaIcons';
 
 function Footer() {
 	return (
-		<footer className='h-64 bg-red pt-10'>
+		<footer className='h-64 bg-dark-blue pt-10'>
 			<div className='w-10/12 mx-auto'>
 				<SocialMediaIcons />
 				<div className='md:flex justify-center md:justify-between text-center '>

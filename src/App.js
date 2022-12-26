@@ -29,7 +29,7 @@ function App() {
 	}, []);
 
 	return (
-		<div className='app bg-deep-blue'>
+		<div className='app bg-black'>
 			<Navbar
 				isTopOfPage={isTopOfPage}
 				selectedPage={selectedPage}
@@ -37,7 +37,7 @@ function App() {
 			/>
 
 			{/* Lower right navigation dots */}
-			<div className='w-5/6 mx-auto md:h-auto'>
+			<div className='w-full md:h-auto'>
 				{isAboveMediumScreens && (
 					<DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
 				)}
@@ -64,7 +64,7 @@ function App() {
 
 			<LineGradient />
 
-			<div className='w-5/6 mx-auto md:h-auto'>
+			<div className='w-full md:h-auto'>
 				<motion.div
 					margin='0 0 -200px 0'
 					amount='all'
