@@ -12,9 +12,18 @@ function Skills() {
 	const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)');
 
 	return (
-		<section id='skills' className='pt-10 pb-24'>
+		<section id='skills' className='pt-10 mb-20 relative border-l-red'>
+			{/* Globe Background */}
+			<div className='absolute w-full h-full'>
+				<Canvas id='canvas'>
+					<Suspense fallback={null}>
+						<Globe />
+					</Suspense>
+				</Canvas>
+			</div>
+
 			{/* Header */}
-			<div className='md:flex md:justify-between md:gap-16 mt-32'>
+			<div className='md:flex md:justify-between md:gap-16 mt-32 px-4'>
 				{/* Text */}
 				<motion.div
 					className='md:w-1/3'
@@ -42,19 +51,10 @@ function Skills() {
 						impedit quibusdam.
 					</p>
 				</motion.div>
-
-				{/* Globe */}
-				<div className='mt-16 md:mt-0'>
-					<Canvas id='canvas'>
-						<Suspense fallback={null}>
-							<Globe />
-						</Suspense>
-					</Canvas>
-				</div>
 			</div>
 
 			{/* Skills */}
-			<div className='md:flex md:justify-between mt-16 gap-32'>
+			<div className='md:flex md:justify-between mt-16 gap-32 px-4'>
 				{/* Experience */}
 				<motion.div
 					className='md:w-1/3 mt-10'
