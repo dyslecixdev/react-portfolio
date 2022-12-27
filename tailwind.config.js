@@ -7,7 +7,7 @@ module.exports = {
 			// Color palette.
 			colors: {
 				red: '#9d3582',
-				yellow: '#fedd34',
+				yellow: '#feba41',
 				blue: '#5daff8',
 				'dark-blue': '#5b4db3',
 				black: '#121212',
@@ -19,7 +19,7 @@ module.exports = {
 			// Background images.
 			backgroundImage: () => ({
 				'gradient-rainbow':
-					'linear-gradient(90deg, #5daff8 14.53%, #9d3582 69.36%, #fedd34 107.73%)',
+					'linear-gradient(90deg, #5daff8 14.53%, #9d3582 69.36%, #feba41 107.73%)',
 				'gradient-space':
 					'radial-gradient(circle at 0% 100%, #49273f, #2d2450 13%, #121212 20%)',
 				'gradient-reverse-space':

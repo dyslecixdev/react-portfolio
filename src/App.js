@@ -16,7 +16,7 @@ function App() {
 	const [isTopOfPage, setIsTopOfPage] = useState(true);
 	const [selectedPage, setSelectedPage] = useState('home');
 
-	const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)'); // If the viewport width is at least 1060px, isAboveMediumScreens is true.
+	const isDesktop = useMediaQuery('(min-width: 1060px)'); // If the viewport width is at least 1060px, isDesktop is true.
 
 	// Determines if the user is at the top of the viewport or not.
 	useEffect(() => {
@@ -38,7 +38,7 @@ function App() {
 
 			{/* Lower right navigation dots */}
 			<div className='w-full md:h-auto'>
-				{isAboveMediumScreens && (
+				{isDesktop && (
 					<DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
 				)}
 				<motion.div

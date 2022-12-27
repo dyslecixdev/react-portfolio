@@ -82,7 +82,7 @@ function Contact() {
 					hidden: {opacity: 0, x: 50},
 					visible: {opacity: 1, x: 0}
 				}}
-				className='flex justify-end w-full pt-24 pr-8 pl-4'
+				className='flex justify-end w-full pt-32 pr-8 pl-8'
 			>
 				<div>
 					<p className='font-playfair font-semibold text-4xl'>
@@ -172,7 +172,7 @@ function Contact() {
 								<button
 									type='submit'
 									value='Send'
-									className='p-5 bg-yellow font-semibold text-black mt-5 hover:bg-red hover:text-white transition duration-500'
+									className='p-5 bg-yellow font-semibold mt-5 hover:bg-red hover:text-white transition duration-500'
 								>
 									SEND ME A MESSAGE
 								</button>

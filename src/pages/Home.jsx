@@ -1,6 +1,9 @@
+import {useState, useEffect} from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import {motion} from 'framer-motion';
+
+import TypeWriterEffect from 'react-typewriter-effect';
 
 import PropTypes from 'prop-types';
 
@@ -9,7 +12,14 @@ import useMediaQuery from '../hooks/useMediaQuery';
 import ProfileImg from '../assets/profile-image.png';
 
 function Home({setSelectedPage}) {
-	const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)');
+	const isDesktop = useMediaQuery('(min-width: 1060px)');
+
+	const [typewriterAlign, setTypewriterAlign] = useState('center');
+
+	useEffect(() => {
+		if (isDesktop) setTypewriterAlign('left');
+		else setTypewriterAlign('center');
+	}, [isDesktop]);
 
 	return (
 		<section
@@ -18,7 +28,7 @@ function Home({setSelectedPage}) {
 		>
 			{/* Image Section */}
 			<div className='md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32'>
-				{isAboveMediumScreens ? (
+				{isDesktop ? (
 					<div className='relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px] before:w-full before:max-w[400px] before:h-full before:border-2 before:border-dark-blue before:z-[-1]'>
 						<img
 							alt='profile'
@@ -55,13 +65,32 @@ function Home({setSelectedPage}) {
 						</span>
 					</p>
 
-					<p className='mt-10 mb-8 text-sm text-center md:text-start'>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis placeat,
-						consequuntur eos corrupti dicta doloremque possimus. Quia nostrum modi
-						corporis iste nesciunt nulla, neque voluptate? At esse voluptatum dolore
-						maiores laboriosam eligendi incidunt ipsa sunt delectus qui aspernatur quae
-						soluta eveniet ducimus ad aut dolor laborum, fuga autem officiis quidem.
-					</p>
+					{/* Typewriter Effect */}
+					<div className='mt-10 mb-8 text-4xl md:text-start text-white font-playfair'>
+						<TypeWriterEffect
+							textStyle={{textAlign: typewriterAlign}}
+							// Delay before first text is typed in milliseconds.
+							startDelay={1000}
+							// Color of cursor.
+							cursorColor='#FBF9F3'
+							// Multiple texts that will be typed out.
+							multiText={[
+								'a Blank Slate',
+								'Father',
+								'Philosopher',
+								'Pianist',
+								'Hiker',
+								'and React Developer'
+							]}
+							// Delay between multiple texts in milliseconds.
+							multiTextDelay={2000}
+							// Loops through the multiple texts indefinitely.
+							// eslint-disable-next-line react/jsx-boolean-value
+							multiTextLoop={true}
+							// How quickly texts is typed in milliseconds.
+							typeSpeed={90}
+						/>
+					</div>
 				</motion.div>
 
 				{/* Contact Links */}
@@ -77,11 +106,11 @@ function Home({setSelectedPage}) {
 					}}
 				>
 					<AnchorLink
-						className='bg-gradient-rainbow py-0.5 px-0.5'
+						className='bg-gradient-rainbow py-0.5 p-0.5'
 						onClick={() => setSelectedPage('contact')}
 						href='#contact'
 					>
-						<div className='bg-black hover:text-dark-blue transition duration-500 w-full h-full flex items-center justify-center font-playfair px-10'>
+						<div className='bg-black hover:bg-white hover:text-black transition duration-500 w-full h-full flex items-center justify-center font-playfair px-10'>
 							Let&apos;s talk
 						</div>
 					</AnchorLink>
