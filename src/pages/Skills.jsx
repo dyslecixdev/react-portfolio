@@ -39,18 +39,18 @@ function Skills() {
 					<LineGradient width='w-1/3' />
 
 					<p className='mt-10 mb-7'>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium
-						dolorem, rem harum obcaecati cupiditate tempore qui non in hic vero,
-						corrupti laudantium ducimus eum nulla veritatis autem. Consequatur eaque,
-						aut omnis repudiandae, facere qui in suscipit consectetur cumque, soluta
-						consequuntur. Veritatis, minima. Iste quaerat sapiente ut labore, dolore
-						impedit quibusdam.
+						Hello, I&apos;m Christian Demesa, an up-and-coming React Developer! I am a
+						father of two wonderful boys, have a B.A. in philosophy, and a certificate
+						of completion in Python, MERN, and Java from Coding Dojo. I specialize in
+						MERN related projects with a heavy emphasis on responsive UI, RESTful
+						routing, MVC architecture, and object-oriented programming. When I&apos;m
+						not coding, other hobbies of mine include playing piano and hiking.
 					</p>
 				</motion.div>
 			</div>
 			{/* Skills */}
 			<div className='md:flex md:justify-between mt-16 gap-32 px-4'>
-				{/* Experience */}
+				{/* Languages */}
 				<motion.div
 					className='md:w-1/3 mt-10'
 					initial='hidden'
@@ -65,18 +65,17 @@ function Skills() {
 					<div className='relative h-32'>
 						<div className='z-10'>
 							<p className='font-playfair font-semibold text-5xl'>01</p>
-							<p className='font-playfair font-semibold text-3xl mt-3'>Experience</p>
+							<p className='font-playfair font-semibold text-3xl mt-3'>Languages</p>
 						</div>
 						<div className='w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]' />
 					</div>
 					<p className='mt-5'>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nostrum
-						repudiandae quos iure incidunt quas. Natus nemo id non voluptate, at
-						perferendis, unde ab asperiores inventore quibusdam, nam laudantium quae?
+						I am proficient in typing HTML5, CSS3, JavaScript 8/11, notably JSX, and
+						NoSQL. I am also a beginner in typing SQL.
 					</p>
 				</motion.div>
 
-				{/* Innovative */}
+				{/* Frameworks & Libraries */}
 				<motion.div
 					className='md:w-1/3 mt-10'
 					initial='hidden'
@@ -91,18 +90,20 @@ function Skills() {
 					<div className='relative h-32'>
 						<div className='z-10'>
 							<p className='font-playfair font-semibold text-5xl'>02</p>
-							<p className='font-playfair font-semibold text-3xl mt-3'>Innovative</p>
+							<p className='font-playfair font-semibold text-3xl mt-3'>
+								Frameworks & Libraries
+							</p>
 						</div>
 						<div className='w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]' />
 					</div>
 					<p className='mt-5'>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nostrum
-						repudiandae quos iure incidunt quas. Natus nemo id non voluptate, at
-						perferendis, unde ab asperiores inventore quibusdam, nam laudantium quae?
+						The frameworks and libraries I am the most comfortable with include Express,
+						React, Node.js, Redux, Axios. Bcryptjs, Dotenv, JWT, React Router Dom,
+						Prettier, EsLint, Material UI with Emotion, Formik, and Yup.
 					</p>
 				</motion.div>
 
-				{/* Imaginative */}
+				{/* Miscellaneous */}
 				<motion.div
 					className='md:w-1/3 mt-10'
 					initial='hidden'
@@ -117,14 +118,15 @@ function Skills() {
 					<div className='relative h-32'>
 						<div className='z-10'>
 							<p className='font-playfair font-semibold text-5xl'>03</p>
-							<p className='font-playfair font-semibold text-3xl mt-3'>Imaginative</p>
+							<p className='font-playfair font-semibold text-3xl mt-3'>
+								Miscellaneous
+							</p>
 						</div>
 						<div className='w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]' />
 					</div>
 					<p className='mt-5'>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nostrum
-						repudiandae quos iure incidunt quas. Natus nemo id non voluptate, at
-						perferendis, unde ab asperiores inventore quibusdam, nam laudantium quae?
+						Additional skills I have a practical familiarity with include Git, Sass,
+						Typescript, Postman, MongoDB, and MySQL.
 					</p>
 				</motion.div>
 			</div>

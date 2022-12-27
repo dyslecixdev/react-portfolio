@@ -106,7 +106,7 @@ function Home({setSelectedPage}) {
 					}}
 				>
 					<AnchorLink
-						className='bg-gradient-rainbow py-0.5 p-0.5'
+						className='bg-gradient-rainbow p-0.5'
 						onClick={() => setSelectedPage('contact')}
 						href='#contact'
 					>

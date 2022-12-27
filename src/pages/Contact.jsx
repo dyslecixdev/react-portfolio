@@ -82,7 +82,7 @@ function Contact() {
 					hidden: {opacity: 0, x: 50},
 					visible: {opacity: 1, x: 0}
 				}}
-				className='flex justify-end w-full pt-32 pr-8 pl-8'
+				className='flex xs:justify-center md:justify-end w-full pt-32 md:pr-20'
 			>
 				<div>
 					<p className='font-playfair font-semibold text-4xl'>

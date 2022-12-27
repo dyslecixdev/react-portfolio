@@ -38,7 +38,7 @@ function Globe() {
 			{/* pointLight object projects a light from a specific position (x, y, and z-axis) */}
 			<pointLight color='#f6f3ea' position={[35, 0, 80]} intensity={1.2} />
 			{/* Creates a specific number (count) of stars a certain radius away from the object at a certain depth that blinks at a specific factor, and they do not fade completely */}
-			<Stars radius={300} depth={60} count={20000} factor={7} saturation={0} />
+			<Stars radius={300} depth={1} count={20000} factor={7} saturation={0} />
 			{/* mesh holds an object at a specific position where ref is its animation */}
 			<mesh position={[2, 2, 0]} ref={cloudRef}>
 				{/* sphereGeometry creates a sphere where args is its radius, width, and height */}

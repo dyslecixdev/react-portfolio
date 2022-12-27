@@ -17,25 +17,30 @@ const projectVariant = {
 	visible: {opacity: 1, scale: 1}
 };
 
-function Project({title, subtitle}) {
-	const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-black cursor-pointer`;
+function Project({title, subtitle, link}) {
+	const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-black`;
 	const projectTitle = title.split(' ').join('-').toLowerCase();
 
 	return (
 		<motion.div variants={projectVariant} className='relative'>
 			<div className={overlayStyles}>
-				<p className='text-2xl font-playfair'>{title}</p>
-				<p className='mt-7'>{subtitle}</p>
+				<p className='font-playfair'>{subtitle}</p>
+				<p className='mt-7 cursor-pointer'>
+					<a href={link} target='_blank' rel='noreferrer noopener'>
+						View code
+					</a>
+				</p>
 			</div>
 			{/* Uses images in the public folder for dynamic pathing */}
-			<img alt={projectTitle} src={`/images/${projectTitle}.jpeg`} />
+			<img alt={projectTitle} src={`/images/${projectTitle}.png`} />
 		</motion.div>
 	);
 }
 
 Project.propTypes = {
 	title: PropTypes.string.isRequired,
-	subtitle: PropTypes.string.isRequired
+	subtitle: PropTypes.string.isRequired,
+	link: PropTypes.string.isRequired
 };
 
 function Projects() {
@@ -63,11 +68,8 @@ function Projects() {
 				</div>
 
 				<p className='mt-10 mb-10'>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium dolorem,
-					rem harum obcaecati cupiditate tempore qui non in hic vero, corrupti laudantium
-					ducimus eum nulla veritatis autem. Consequatur eaque, aut omnis repudiandae,
-					facere qui in suscipit consectetur cumque, soluta consequuntur. Veritatis,
-					minima. Iste quaerat sapiente ut labore, dolore impedit quibusdam.
+					Here is a collection of the projects I am currently most proud of. <br /> Please
+					take a look at each one by clicking on their respective image.
 				</p>
 			</motion.div>
 
@@ -83,47 +85,49 @@ function Projects() {
 					{/* Row 1 */}
 					<motion.div
 						variants={projectVariant}
-						className='flex justify-center text-center items-center p-10 bg-blue max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold'
+						className='flex justify-center text-center items-center p-10 bg-blue max-w-[600px] min-h-[200px] text-2xl font-playfair font-semibold'
 					>
-						BEAUTIFUL USER INTERFACES
+						RESPONSIVE WEB DESIGN
 					</motion.div>
 					<Project
 						title='Project 1'
-						subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, repudiandae!'
+						subtitle='Pokedex'
+						link='https://github.com/christiandeandemesa/pokedex'
 					/>
 					<Project
 						title='Project 2'
-						subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, repudiandae!'
+						subtitle='50 JavaScript Projects'
+						link='https://github.com/christiandeandemesa/50-Projects-in-50-Days'
 					/>
 
 					{/* Row 2 */}
 					<Project
 						title='Project 3'
-						subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, repudiandae!'
+						subtitle='MERN Blog'
+						link='https://github.com/christiandeandemesa/MERN-blog'
 					/>
 					<motion.div
 						variants={projectVariant}
-						className='flex justify-center text-center items-center p-10 bg-red max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold'
+						className='flex justify-center text-center items-center p-10 bg-red max-w-[600px] min-h-[200px] text-2xl font-playfair font-semibold'
 					>
-						RESTFUL API
+						RESTFUL API ARCHITECTURE
 					</motion.div>
 					<Project
-						title='Project 5'
-						subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, repudiandae!'
+						title='Project 4'
+						subtitle='MERN E-commerce'
+						link='https://github.com/christiandeandemesa/MERN-ecommerce'
 					/>
 
 					{/* Row 3 */}
 					<Project
-						title='Project 6'
-						subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, repudiandae!'
+						title='Project 5'
+						subtitle='Admin Dashboard'
+						link='https://github.com/christiandeandemesa/react-admin'
 					/>
-					<Project
-						title='Project 7'
-						subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, repudiandae!'
-					/>
+					<Project title='Project 6' subtitle='To be added.' link='https://google.com' />
 					<motion.div
 						variants={projectVariant}
-						className='flex justify-center text-center items-center p-10 bg-yellow max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold'
+						className='flex justify-center text-center items-center p-10 bg-yellow max-w-[600px] min-h-[200px] text-2xl font-playfair font-semibold'
 					>
 						SMOOTH USER EXPERIENCE
 					</motion.div>
