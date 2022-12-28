@@ -82,7 +82,7 @@ function Contact() {
 					hidden: {opacity: 0, x: 50},
 					visible: {opacity: 1, x: 0}
 				}}
-				className='flex xs:justify-center md:justify-end w-full pt-32 md:pr-20'
+				className='flex xs:justify-center md:justify-end w-full px-4 pt-32 md:pr-20'
 			>
 				<div>
 					<p className='font-playfair font-semibold text-4xl'>
@@ -141,7 +141,7 @@ function Contact() {
 								/>
 								{/* Error text for the name input appears if it was focused on and violates its schema */}
 								{!!touched.user_name && !!errors.user_name && (
-									<p className='text-red mt-1'>{errors.user_name}</p>
+									<p className='text-red mt-1 text-2xl'>{errors.user_name}</p>
 								)}
 
 								<input
@@ -154,7 +154,7 @@ function Contact() {
 									className='w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5 focus:outline-none focus:ring'
 								/>
 								{!!touched.user_email && !!errors.user_email && (
-									<p className='text-red mt-1'>{errors.user_email}</p>
+									<p className='text-red mt-1 text-2xl'>{errors.user_email}</p>
 								)}
 
 								<textarea
@@ -166,7 +166,7 @@ function Contact() {
 									className='w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5 focus:outline-none focus:ring'
 								/>
 								{!!touched.message && !!errors.message && (
-									<p className='text-red mt-1'>{errors.message}</p>
+									<p className='text-red mt-1 text-2xl'>{errors.message}</p>
 								)}
 
 								<button

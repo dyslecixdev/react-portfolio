@@ -22,7 +22,6 @@ function Skills() {
 			<div className='md:flex md:justify-between md:gap-16 mt-20 px-4'>
 				{/* Text */}
 				<motion.div
-					className='md:w-1/3'
 					initial='hidden'
 					whileInView='visible'
 					viewport={{once: true, amount: 0.5}}
@@ -31,6 +30,7 @@ function Skills() {
 						hidden: {opacity: 0, x: -50},
 						visible: {opacity: 1, x: 0}
 					}}
+					className='md:w-1/3'
 				>
 					<p className='font-playfair font-semibold text-4xl mb-5'>
 						MY <span className='text-blue'>SKILLS</span>
@@ -67,7 +67,7 @@ function Skills() {
 							<p className='font-playfair font-semibold text-5xl'>01</p>
 							<p className='font-playfair font-semibold text-3xl mt-3'>Languages</p>
 						</div>
-						<div className='w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]' />
+						<div className='w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]' />
 					</div>
 					<p className='mt-5'>
 						I am proficient in typing HTML5, CSS3, JavaScript 8/11, notably JSX, and
@@ -94,7 +94,7 @@ function Skills() {
 								Frameworks & Libraries
 							</p>
 						</div>
-						<div className='w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]' />
+						<div className='w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]' />
 					</div>
 					<p className='mt-5'>
 						The frameworks and libraries I am the most comfortable with include Express,
@@ -122,7 +122,7 @@ function Skills() {
 								Miscellaneous
 							</p>
 						</div>
-						<div className='w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]' />
+						<div className='w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]' />
 					</div>
 					<p className='mt-5'>
 						Additional skills I have a practical familiarity with include Git, Sass,

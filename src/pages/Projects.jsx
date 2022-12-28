@@ -76,7 +76,7 @@ function Projects() {
 			{/* Projects */}
 			<div className='flex justify-center px-8'>
 				<motion.div
-					className='sm:grid sm:grid-cols-3'
+					className='sm:grid sm:grid-cols-3 px-8'
 					variants={container}
 					initial='hidden'
 					whileInView='visible'

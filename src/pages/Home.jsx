@@ -1,17 +1,15 @@
 import {useState, useEffect} from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import {motion} from 'framer-motion';
 
 import TypeWriterEffect from 'react-typewriter-effect';
 
-import PropTypes from 'prop-types';
-
 import SocialMediaIcons from '../components/SocialMediaIcons';
 import useMediaQuery from '../hooks/useMediaQuery';
 import ProfileImg from '../assets/profile-image.png';
+import Resume from '../assets/resume.pdf';
 
-function Home({setSelectedPage}) {
+function Home() {
 	const isDesktop = useMediaQuery('(min-width: 1060px)');
 
 	const [typewriterAlign, setTypewriterAlign] = useState('center');
@@ -105,15 +103,17 @@ function Home({setSelectedPage}) {
 						visible: {opacity: 1, x: 0}
 					}}
 				>
-					<AnchorLink
-						className='bg-gradient-rainbow p-0.5'
-						onClick={() => setSelectedPage('contact')}
-						href='#contact'
-					>
-						<div className='bg-black hover:bg-white hover:text-black transition duration-500 w-full h-full flex items-center justify-center font-playfair px-10'>
-							Let&apos;s talk
-						</div>
-					</AnchorLink>
+					<div className='bg-gradient-rainbow p-0.5 rounded'>
+						<a
+							href={Resume}
+							download='ChristianDemesaResume'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='bg-black hover:bg-white hover:text-black transition duration-500 w-full h-full flex items-center justify-center font-playfair px-10'
+						>
+							Download My Resume
+						</a>
+					</div>
 				</motion.div>
 
 				{/* Social Links */}
@@ -134,9 +134,5 @@ function Home({setSelectedPage}) {
 		</section>
 	);
 }
-
-Home.propTypes = {
-	setSelectedPage: PropTypes.func.isRequired
-};
 
 export default Home;
