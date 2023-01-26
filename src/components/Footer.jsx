@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 import Particles from 'react-tsparticles';
 import {loadFull} from 'tsparticles';
@@ -8,7 +7,6 @@ import SocialMediaIcons from './SocialMediaIcons';
 function Footer() {
 	// Needed for Particles component's init props.
 	const particlesInit = async main => {
-		console.log(main);
 		await loadFull(main);
 	};
 
@@ -18,7 +16,8 @@ function Footer() {
 	};
 
 	return (
-		<footer className='h-64 bg-dark-blue pt-10'>
+		<footer className='h-60 bg-dark-blue pt-10'>
+			{/* Text */}
 			<div className='w-10/12 mx-auto'>
 				<SocialMediaIcons />
 				<div className='md:flex justify-center md:justify-between text-center'>

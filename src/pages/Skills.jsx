@@ -71,7 +71,7 @@ function Skills() {
 					</div>
 					<p className='mt-5'>
 						I am proficient in typing HTML5, CSS3, JavaScript 8/11, notably JSX, and
-						NoSQL. I am also a beginner in typing SQL.
+						NoSQL. I also have limited experience with Python, Java, and SQL.
 					</p>
 				</motion.div>
 

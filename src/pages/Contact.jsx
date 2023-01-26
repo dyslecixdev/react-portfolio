@@ -8,7 +8,7 @@ import {Formik} from 'formik';
 import * as yup from 'yup';
 
 import LineGradient from '../components/LineGradient';
-
+import useMediaQuery from '../hooks/useMediaQuery';
 import ContactImg from '../assets/contact-img.svg';
 import SpaceImg from '../assets/space.png';
 
@@ -33,6 +33,8 @@ const emailSchema = yup.object().shape({
 });
 
 function Contact() {
+	const isDesktop = useMediaQuery('(min-width: 1060px)');
+
 	const form = useRef(); // Since the form is changing whenever we change any of its input values, we use useRef to avoid re-rendering whenever the form value is mutated.
 
 	// Submits the Formik values.
@@ -64,13 +66,15 @@ function Contact() {
 	};
 
 	return (
-		<section id='contact' className='pb-20 mx-auto relative'>
-			{/* Space Background */}
-			<img
-				alt='space-background'
-				src={SpaceImg}
-				className='absolute w-full h-full bg-cover bg-center bg-repeat'
-			/>
+		<section id='contact' className='pb-20 mx-auto relative bg-gradient-space'>
+			{/* Desktop Space Background */}
+			{isDesktop && (
+				<img
+					alt='space-background'
+					src={SpaceImg}
+					className='absolute w-full h-full bg-cover bg-center'
+				/>
+			)}
 
 			{/* Heading */}
 			<motion.div
@@ -141,7 +145,7 @@ function Contact() {
 								/>
 								{/* Error text for the name input appears if it was focused on and violates its schema */}
 								{!!touched.user_name && !!errors.user_name && (
-									<p className='text-red mt-1 text-2xl'>{errors.user_name}</p>
+									<p className='text-red mt-1 text-xl'>{errors.user_name}</p>
 								)}
 
 								<input
@@ -154,7 +158,7 @@ function Contact() {
 									className='w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5 focus:outline-none focus:ring'
 								/>
 								{!!touched.user_email && !!errors.user_email && (
-									<p className='text-red mt-1 text-2xl'>{errors.user_email}</p>
+									<p className='text-red mt-1 text-xl'>{errors.user_email}</p>
 								)}
 
 								<textarea
@@ -166,7 +170,7 @@ function Contact() {
 									className='w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5 focus:outline-none focus:ring'
 								/>
 								{!!touched.message && !!errors.message && (
-									<p className='text-red mt-1 text-2xl'>{errors.message}</p>
+									<p className='text-red mt-1 text-xl'>{errors.message}</p>
 								)}
 
 								<button

@@ -27,7 +27,7 @@ function Project({title, subtitle, link}) {
 				<p className='font-playfair'>{subtitle}</p>
 				<p className='mt-7 cursor-pointer'>
 					<a href={link} target='_blank' rel='noreferrer noopener'>
-						View code
+						GitHub Code
 					</a>
 				</p>
 			</div>
@@ -124,7 +124,11 @@ function Projects() {
 						subtitle='Admin Dashboard'
 						link='https://github.com/christiandeandemesa/react-admin'
 					/>
-					<Project title='Project 6' subtitle='To be added.' link='https://google.com' />
+					<Project
+						title='Project 6'
+						subtitle='MERN Chat'
+						link='https://github.com/christiandeandemesa/MERN-chat'
+					/>
 					<motion.div
 						variants={projectVariant}
 						className='flex justify-center text-center items-center p-10 bg-yellow max-w-[600px] min-h-[200px] text-2xl font-playfair font-semibold'
