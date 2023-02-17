@@ -70,8 +70,9 @@ function Skills() {
 						<div className='w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]' />
 					</div>
 					<p className='mt-5'>
-						I am proficient in typing HTML5, CSS3, JavaScript 8/11, notably JSX, and
-						NoSQL. I also have limited experience with Python, Java, and SQL.
+						I am proficient in typing HTML5, CSS3, JavaScript 8/11, notably JSX and
+						Typescript, and NoSQL. I also have some experience with Python, Java, and
+						SQL.
 					</p>
 				</motion.div>
 
@@ -98,8 +99,9 @@ function Skills() {
 					</div>
 					<p className='mt-5'>
 						The frameworks and libraries I am the most comfortable with include Express,
-						React, Node.js, Redux, Axios. Bcryptjs, Dotenv, JWT, React Router Dom,
-						Prettier, EsLint, Material UI with Emotion, Formik, and Yup.
+						React, Angular, Node.js, Redux, Axios, Bcryptjs, Dotenv, JWT, React Router
+						Dom, Prettier, EsLint, Material UI with Emotion, Angular Material, Formik,
+						and Yup.
 					</p>
 				</motion.div>
 
@@ -125,8 +127,9 @@ function Skills() {
 						<div className='w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]' />
 					</div>
 					<p className='mt-5'>
-						Additional skills I have a practical familiarity with include Git, Sass,
-						Typescript, Postman, MongoDB, and MySQL.
+						Additional skills I have include a practical familiarity with include Git,
+						Sass, Typescript, Postman, MongoDB, and MySQL, and project deployment with
+						Render and Netlify.
 					</p>
 				</motion.div>
 			</div>

@@ -91,8 +91,8 @@ function Projects() {
 					</motion.div>
 					<Project
 						title='Project 1'
-						subtitle='Pokedex'
-						link='https://github.com/christiandeandemesa/pokedex'
+						subtitle='MEAN Delivery'
+						link='https://github.com/christiandeandemesa/MEAN-delivery'
 					/>
 					<Project
 						title='Project 2'
