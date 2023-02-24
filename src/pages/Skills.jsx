@@ -41,10 +41,11 @@ function Skills() {
 					<p className='mt-10 mb-7'>
 						Hello, I&apos;m Christian Demesa, an up-and-coming React Developer! I am a
 						father of two wonderful boys, have a B.A. in philosophy, and a certificate
-						of completion in Python, MERN, and Java from Coding Dojo. I specialize in
-						MERN related projects with a heavy emphasis on responsive UI, RESTful
-						routing, MVC architecture, and object-oriented programming. When I&apos;m
-						not coding, other hobbies of mine include playing piano and hiking.
+						of completion in Python, MERN, and Java full stack web development from
+						Coding Dojo. I specialize in MERN and MEAN related projects with a heavy
+						emphasis on responsive UI design, RESTful routing, MVC architecture, and
+						object-oriented programming. When I&apos;m not coding, other hobbies of mine
+						include playing piano, hiking, and learning languages.
 					</p>
 				</motion.div>
 			</div>
@@ -71,8 +72,8 @@ function Skills() {
 					</div>
 					<p className='mt-5'>
 						I am proficient in typing HTML5, CSS3, JavaScript 8/11, notably JSX and
-						Typescript, and NoSQL. I also have some experience with Python, Java, and
-						SQL.
+						Typescript, NoSQL, and SQL. I also have some experience with Python and
+						Java.
 					</p>
 				</motion.div>
 
