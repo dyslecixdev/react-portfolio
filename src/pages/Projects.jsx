@@ -27,7 +27,7 @@ function Project({title, subtitle, link}) {
 				<p className='font-playfair'>{subtitle}</p>
 				<p className='mt-7 cursor-pointer'>
 					<a href={link} target='_blank' rel='noreferrer noopener'>
-						GitHub Code
+						View More
 					</a>
 				</p>
 			</div>
@@ -96,8 +96,8 @@ function Projects() {
 					/>
 					<Project
 						title='Project 2'
-						subtitle='50 JavaScript Projects'
-						link='https://github.com/christiandeandemesa/50-Projects-in-50-Days'
+						subtitle='Wordpress Blog'
+						link='https://logiclyceum.com/'
 					/>
 
 					{/* Row 2 */}
