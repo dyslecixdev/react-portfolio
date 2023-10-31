@@ -77,7 +77,7 @@ function Home() {
 								'Philosopher',
 								'Pianist',
 								'Hiker',
-								'and React Developer'
+								'and Software Engineer'
 							]}
 							// Delay between multiple texts in milliseconds.
 							multiTextDelay={2000}

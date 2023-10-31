@@ -39,13 +39,13 @@ function Skills() {
 					<LineGradient width='w-1/3' />
 
 					<p className='mt-10 mb-7'>
-						Hello, I&apos;m Christian Demesa, an up-and-coming React Developer! I am a
-						father of two wonderful boys, have a B.A. in philosophy, and a certificate
-						of completion in Python, MERN, and Java full stack web development from
-						Coding Dojo. I specialize in MERN and MEAN related projects with a heavy
-						emphasis on responsive UI design, RESTful routing, MVC architecture, and
-						object-oriented programming. When I&apos;m not coding, other hobbies of mine
-						include playing piano, hiking, and learning languages.
+						Hello, I&apos;m Christian Demesa, a Software Engineer! I am a father of two
+						wonderful boys, have a B.A. in philosophy, and a certificate of completion
+						in Python, MERN, and Java full stack software development from Coding Dojo.
+						I specialize in MERN and Next.js related projects with a heavy emphasis on
+						responsive UI design, RESTful routing, MVC architecture, and functional
+						programming. When I&apos;m not coding, other hobbies of mine include playing
+						piano, hiking, and playing Just Dance with my family.
 					</p>
 				</motion.div>
 			</div>
@@ -71,9 +71,8 @@ function Skills() {
 						<div className='w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]' />
 					</div>
 					<p className='mt-5'>
-						I am proficient in typing HTML5, CSS3, JavaScript 8/11, notably JSX and
-						Typescript, NoSQL, and SQL. I also have some experience with Python and
-						Java.
+						I am proficient in HTML, CSS, JavaScript 8/11, Typescript, Python, Java,
+						SQL, and NoSQL.
 					</p>
 				</motion.div>
 
@@ -92,17 +91,13 @@ function Skills() {
 					<div className='relative h-32'>
 						<div className='z-10'>
 							<p className='font-playfair font-semibold text-5xl'>02</p>
-							<p className='font-playfair font-semibold text-3xl mt-3'>
-								Frameworks & Libraries
-							</p>
+							<p className='font-playfair font-semibold text-3xl mt-3'>Frameworks</p>
 						</div>
 						<div className='w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]' />
 					</div>
 					<p className='mt-5'>
-						The frameworks and libraries I am the most comfortable with include Express,
-						React, Angular, Node.js, Redux, Axios, Bcryptjs, Dotenv, JWT, React Router
-						Dom, Prettier, EsLint, Material UI with Emotion, Angular Material, Formik,
-						and Yup.
+						The frameworks I am the most comfortable with include React, Next.js,
+						Angular, Node.js, Express.js, Flask, and Spring Boot.
 					</p>
 				</motion.div>
 
@@ -128,9 +123,10 @@ function Skills() {
 						<div className='w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]' />
 					</div>
 					<p className='mt-5'>
-						Additional skills I have include a practical familiarity with include Git,
-						Sass, Typescript, Postman, MongoDB, and MySQL, and project deployment with
-						Render and Netlify.
+						Additional skills I have include a practical familiarity with Git, GitHub,
+						Bitbucket, Tailwind, Bootstrap, SASS, JSON, jQuery, NumPy, Pandas, MySQL,
+						SQLite, MongoDB, Firebase, Supabase, Postman, Vite, Docker, Jest, Vitest,
+						Vercel, Netlify, Render, and WordPress.
 					</p>
 				</motion.div>
 			</div>

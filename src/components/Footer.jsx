@@ -5,6 +5,8 @@ import {loadFull} from 'tsparticles';
 import SocialMediaIcons from './SocialMediaIcons';
 
 function Footer() {
+	const year = new Date().getFullYear();
+
 	// Needed for Particles component's init props.
 	const particlesInit = async main => {
 		await loadFull(main);
@@ -25,7 +27,7 @@ function Footer() {
 						CHRISTIAN DEMESA
 					</p>
 					<p className='font-playfair text-md text-yellow'>
-						©2022 DEMESA. All Rights Reserved.
+						©{year} DyslecixDev. All Rights Reserved.
 					</p>
 				</div>
 			</div>
