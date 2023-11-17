@@ -40,12 +40,14 @@ function Skills() {
 
 					<p className='mt-10 mb-7'>
 						Hello, I&apos;m Christian Demesa, a Software Engineer! I am a father of two
-						wonderful boys, have a B.A. in philosophy, and a certificate of completion
-						in Python, MERN, and Java full stack software development from Coding Dojo.
-						I specialize in MERN and Next.js related projects with a heavy emphasis on
-						responsive UI design, RESTful routing, MVC architecture, and functional
-						programming. When I&apos;m not coding, other hobbies of mine include playing
-						piano, hiking, and playing Just Dance with my family.
+						wonderful boys, have a B.A. in philosophy, and Software Development
+						certificates in Python, MERN, and Java full stack software development from
+						Coding Dojo. I specialize in React and Next.js related projects with a heavy
+						emphasis on responsive UI design, RESTful routing, MVC architecture,
+						functional programming, test driven development, and Agile methodologies.
+						When I&apos;m not coding, other hobbies of mine include writing about
+						philosophy, playing piano, hiking, and having my kids beat me at Super Smash
+						Bros.
 					</p>
 				</motion.div>
 			</div>
@@ -71,8 +73,7 @@ function Skills() {
 						<div className='w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]' />
 					</div>
 					<p className='mt-5'>
-						I am proficient in HTML, CSS, JavaScript 8/11, Typescript, Python, Java,
-						SQL, and NoSQL.
+						I am proficient in HTML, CSS, JavaScript, Typescript, Python, Java, and SQL.
 					</p>
 				</motion.div>
 
@@ -97,7 +98,7 @@ function Skills() {
 					</div>
 					<p className='mt-5'>
 						The frameworks I am the most comfortable with include React, Next.js,
-						Angular, Node.js, Express.js, Flask, and Spring Boot.
+						Angular, Flask, Spring Boot, Node.js, Express.js, jQuery, NumPy, and Pandas.
 					</p>
 				</motion.div>
 
@@ -123,10 +124,10 @@ function Skills() {
 						<div className='w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]' />
 					</div>
 					<p className='mt-5'>
-						Additional skills I have include a practical familiarity with Git, GitHub,
-						Bitbucket, Tailwind, Bootstrap, SASS, JSON, jQuery, NumPy, Pandas, MySQL,
-						SQLite, MongoDB, Firebase, Supabase, Postman, Vite, Docker, Jest, Vitest,
-						Vercel, Netlify, Render, and WordPress.
+						Additional skills I have include a practical familiarity with MongoDB,
+						MySQL, SQLite, Vercel, Netlify, Git, GitHub, Figma, Vite, Docker, Postman,
+						Firebase, Supabase, DigitalOcean, JSON, SASS, TailwindCSS, Bootstrap, Jest,
+						and WordPress.
 					</p>
 				</motion.div>
 			</div>
